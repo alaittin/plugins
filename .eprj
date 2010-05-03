@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>fileTriggers</key>
+        <dict>
+            <key>category</key>
+            <string>app\models\category.rb</string>
+            <key>plugin</key>
+            <string>app\controllers\plugins_controller.rb</string>
+        </dict>
+    </dict>
+</plist>

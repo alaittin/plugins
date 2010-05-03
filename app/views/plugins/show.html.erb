@@ -1,0 +1,54 @@
+<p>
+  <b>Name:</b>
+  <%=h @plugin.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @plugin.description %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @plugin.url %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @plugin.category.name %>
+</p>
+
+<p>
+  <b>Current Rating (<em><%= pluralize(@plugin.ratings.size, 'vote') %></em>)</b>
+
+<ul class="star-rating">
+  <li class="current-rating" style="width:<%= @plugin.rating*25 %>px">
+    Currently <%= @plugin.rating %>/5 Stars.
+  </li>
+</ul>
+</p>
+
+<div id="rate_plugin">
+   <h2>Rate this Plugin</h2> 
+   <ul class="star-rating">
+     <li><%= link_to "1", plugin_ratings_path(@plugin, :rating => 1),
+              :method => :post, :title => "1 star out of 5", :class => "one-star" %>
+     </li>
+     <li><%= link_to "2", plugin_ratings_path(@plugin, :rating => 2),
+              :method => :post, :title => "2 star out of 5", :class => "two-stars" %>
+     </li>
+     <li><%= link_to "3", plugin_ratings_path(@plugin, :rating => 3),
+              :method => :post, :title => "3 star out of 5", :class => "three-stars" %>
+     </li>
+     <li><%= link_to "4", plugin_ratings_path(@plugin, :rating => 4),
+              :method => :post, :title => "4 star out of 5", :class => "four-stars" %>
+     </li>
+     <li><%= link_to "5", plugin_ratings_path(@plugin, :rating => 5),
+              :method => :post, :title => "5 star out of 5", :class => "five-stars" %>
+     </li>
+   </ul>  
+  
+</div>
+<br />
+<%= link_to 'Edit', edit_plugin_path(@plugin) %> |
+<%= link_to 'Back', plugins_path %>

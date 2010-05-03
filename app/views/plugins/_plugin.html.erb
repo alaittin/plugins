@@ -1,0 +1,13 @@
+<dl>
+  <dt>
+    <%= link_to h(plugin.name), plugin %>
+  </dt>
+  <dt>
+  <ul class="star-rating small-star">
+    <li class="current-rating" style="width:<%= plugin.rating*10 %>px"> 
+      Currently <%= plugin.rating %>/5 Stars.
+     </li>
+  </ul>
+  </dt>
+  <dd><%= h(truncate(plugin.description,230)) %></dd>
+</dl>
